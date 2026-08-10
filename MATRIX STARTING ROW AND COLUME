@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+  int arr[200][200],a,b;
+  printf("ENTER YOUR NUMBER OF ROW : ");
+  scanf("%d",&a);
+  printf("ENTER YOUR NUMBER OF COLUMN : ");
+  scanf("%d",&b);
+  for(int i = 0; i<a; i++)
+  {
+    for(int j = 0; j<b; j++)
+    {
+      printf("ENTER YOUR [%d][%d] ELEMENT : ",i,j);
+      scanf("%d",&arr[i][j]);
+    }
+  }
+  printf("YOUR MATRIX IS\n");
+  for(int i = 0; i<a; i++)
+  {
+    for(int j = 0; j<b; j++)
+    {
+      printf("%d\t",arr[i][j]);
+    }
+    printf("\n");
+  }
+ 
+}
