@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main(){
+
+int arr[200][200],a,b;
+printf("ENTER YOUR NUMBER OF ROW : ");
+
+scanf("%d",&a);
+printf("ENTER YOUR NUMBER OF COLUME : ");
+scanf("%d",&b);
+
+for(int i = 0; i<a; i++)
+{
+	for(int j = 0; j<b; j++)
+	{
+		printf("ENTER YOUR [%d][%d] : ",i,j);
+		scanf("%d",&arr[i][j]);
+	}
+}
+printf("YOUR MATRIX IS : \n");
+for(int i = 0; i<a; i++)
+{
+	for(int j = 0; j<b; j++)
+    {
+    	printf("%d\t",arr[i][j]);
+	}
+	printf("\n");
+}
+printf("ADDING\n");
+int sum=0;
+for(int i = 0; i<a; i++)
+{
+		sum = sum + arr[i][i];
+}
+printf("AFTER ADDING THIS 2D ARRAY  %d\n",sum);
+
+}
