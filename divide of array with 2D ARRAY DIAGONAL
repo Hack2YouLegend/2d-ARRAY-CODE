@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+	float arr[200][200],sum;
+	int a,b;
+	
+	printf("ENTER YOUR NUMBER OF ROW : ");
+	scanf("%d",&a);
+	printf("ENTER YOUR NUMBER OF COLUMN : ");
+	scanf("%d",&b);
+	for(int i = 0; i<a; i++)
+	{
+		for(int j = 0; j<b; j++)
+		{
+      printf("ENTER YOUR MATRIX [%d][%d] : ",i,j);
+			scanf("%f",&arr[i][j]);
+		}
+	}
+	sum = arr[0][0];
+	printf("MULTIPLE OF ARRAY\n");
+    for(int i = 1; i<a; i++)
+    {
+		sum = sum / arr[i][i];
+		
+    }
+	printf("YOUR MULTIPLICATION NUMBER : %f",sum);
+}
