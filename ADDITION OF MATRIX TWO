@@ -1,0 +1,55 @@
+#include <stdio.h>
+int main()
+{
+	int arra[200][200],a,b;
+	printf("ENTER YOUR NUMBER OF ROW : ");
+	scanf("%d",&a);
+	printf("ENTER YOUR NUMBER OF COLUMN : ");
+	scanf("%d",&b);
+	printf("\n");
+  for(int i = 0; i<a; i++)
+	{
+		for(int j = 0; j<b; j++)
+		{
+			printf("ENTER YOUR FIRST MATRIX NUMBER [%d][%d] : ",i,j);
+			scanf("%d",&arra[i][j]);
+
+		}
+	}
+	int arrb[200][200],c,d;
+	printf("ENTER YOUR SECOND MATRIX NUMBER OF ROW : ");
+	scanf("%d",&c);
+		printf("ENTER YOUR SECOND MATRIX NUMBER OF COLOMN : ");
+	scanf("%d",&d);
+	printf("\n");
+	for(int i = 0; i<a; i++)
+	{
+		for(int j = 0; j<b; j++)
+		{
+			printf("ENTER YOUR SECOND MATRIX NUMBER [%d][%d] : ",i,j);
+			scanf("%d",&arrb[i][j]);
+
+		}
+	}
+	printf("\n");
+  int arrc[200][299];
+
+	for(int i = 0; i<a; i++)
+	{
+		for(int j = 0; j<b; j++)
+		{
+	arrc[i][j] = arra[i][j] + arrb[i][j];
+		}
+	}
+
+
+   printf("YOUR ARRAY AFTER ADDITION\n\n");
+for(int i = 0; i<c; i++)
+{
+	for(int j = 0; j<d; j++)
+	{
+		printf("%d\t",arrc[i][j]);
+	}
+	printf("\n");
+}
+}
