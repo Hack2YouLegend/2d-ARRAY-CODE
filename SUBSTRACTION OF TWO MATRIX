@@ -1,0 +1,65 @@
+#include <stdio.h>
+
+int main()
+{
+	int arr[200][200],arrb[200][200],arrc[200][200];
+	int a,b,c,d;
+
+	printf("ENTER YOUR FIRST MATRIX ROW : ");
+	scanf("%d",&a);
+	printf("\n");
+
+	printf("ENTER YOUR FIRST MATRIX COLOUMN : ");
+	scanf("%d",&b);
+	printf("\n");
+
+	for(int i = 0; i<a; i++)
+	{
+		for(int j =0; j<b; j++)
+		{
+			printf("ENTER YOUR FIRST MATRIX NUMBER [%d][%d] : ",i,j);
+			scanf("%d",&arr[i][j]);
+		}
+		printf("\n");
+	}
+
+	printf("\n");
+
+	printf("ENTER YOUR SECOND MATRIX ROW : ");
+	scanf("%d",&c);
+	printf("\n");
+
+	printf("ENTER YOUR SECOND MATRIX COLOUM : ");
+	scanf("%d",&d);
+
+	for(int i =0; i<c; i++)
+	{
+		for(int j =0; j<d; j++)
+		{
+			printf("ENTER YOUR SECOND MATRIX NUMBER [%d][%d] : ",i,j);
+			scanf("%d",&arrb[i][j]);
+		}
+		printf("\n");
+	}
+
+	printf("SUBSTRACTION PROCESS\n");
+
+	for(int i =0; i<c; i++)
+	{
+		for(int j = 0; j<d; j++)
+		{
+			arrc[i][j] = arr[i][j] - arrb[i][j];
+		}
+	}
+
+	printf("SUBSTRACTION\n");
+
+	for(int i =0; i<a; i++)
+	{
+		for(int j = 0; j<b; j++)
+		{
+			printf("%d\t",arrc[i][j]);
+		}
+		printf("\n");
+	}
+}
