@@ -1,0 +1,58 @@
+#include <stdio.h>
+int main()
+{
+    int a[333][333],b[444][444],s[544][544];
+    int  x,y,z,c;
+    printf("ENTER NUMBER OF ROWS :\t "    );
+    scanf("%d",&x);
+    printf("ENTER NUMBER OF COLUMNS :\t " );
+    scanf("%d",&y);
+    printf("\n\n");
+    for(int i = 0; i<x; i++)
+    {
+        for(int j = 0; j<y; j++)
+        {
+            printf("ENTER ELEMENTS OF FIRST MATRIX [%d][%d] : ",i,j);
+             scanf("%d",&a[i][j]);
+        }
+    }
+    printf("\n\n");
+    printf("\n\n");
+        printf("ENTER NUMBER OF ROWS :\t "    );
+    scanf("%d",&z);
+    printf("ENTER NUMBER OF COLUMNS :\t " );
+    scanf("%d",&c);
+	printf("ENTER YOUR SECOND MARTIX NUMBER \n");
+    printf("\n\n");
+	for(int i = 0; i<z; i++)
+    {
+        for(int j = 0; j<c; j++)
+        {
+            printf("ENTER ELEMENTS OF SECOND MATRIX [%d][%d] ",i,j);
+            scanf("%d",&b[i][j]);
+        }
+    }
+        printf("\n\n");
+        printf("MULITPILCATION\n");
+        
+        for(int i = 0; i<x; i++)
+        {
+            for(int j = 0; j<c; j++)
+            {
+                s[i][j] = 0;
+                for(int k = 0; k<y; k++)
+                {
+                   s[i][j] += a[i][k] * b[k][j];
+                }
+            }
+        }
+        printf("AFTER MULTIPLCIATION\n");
+        for(int i = 0; i<x; i++)
+        {
+            for(int j = 0; j<c; j++)
+            {
+                printf("%d\t",s[i][j]);
+            }
+            printf("\n");
+        }
+}
