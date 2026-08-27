@@ -1,0 +1,125 @@
+#include <stdio.h>
+int main()
+{
+   int a[343][343],b[232][232],c[343][343];
+   int x,y,z,v,d;
+   printf("ENTER YOUR ROW : ");
+   scanf("%d",&x);
+   printf("\n");
+   printf("ENTER YOUR COLOUMN : ");
+   scanf("%d",&y);
+   printf("\n");
+
+   for(int i = 0; i<x; i++)
+   {
+     for(int j = 0; j<y; j++)
+     {
+        printf("ENTER YOUR FIRST MARTIX [%d][%d] : ",i,j);
+        scanf("%d",&a[i][j]);
+     }
+     printf("\n");
+   }
+    printf("ENTER SECond YOUR ROW : ");
+   scanf("%d",&z);
+   printf("\n");
+   printf("ENTER SECOND YOUR COLOUMN : ");
+   scanf("%d",&v);
+   printf("\n");
+   
+   for(int i = 0; i<z; i++)
+   {
+     for(int j = 0; j<v; j++)
+     {
+        printf("ENTER YOUR SECOND MARTIX [%d][%d] : ",i,j);
+        scanf("%d",&b[i][j]);
+     }
+     printf("\n");
+   }
+   printf("\n");
+   printf("PRESS 1 FOR ADDITION\n");
+   printf("PRESS 2 FOR SUBSTRACTION\n");
+   printf("PRESS 3 FOR MULIPLE\n");
+   printf("ENTER YOUR CHOICE : ");
+   scanf("%d",&d);
+   switch(d)
+   {
+    case 1:
+    {
+          for(int i = 0; i<x; i++)
+   {
+     for(int j = 0; j<y; j++)
+     {
+        c[i][j]  = a[i][j] + b[i][j];
+
+     }
+     printf("\n");
+   }
+   printf("YOUR ADDITION ARRAY IS DONE\n");
+       for(int i = 0; i<x; i++)
+   {
+     for(int j = 0; j<y; j++)
+     {
+       printf("%d\t",c[i][j]);
+
+     }
+     printf("\n");
+   }
+   break;
+    }
+case 2:
+{
+      for(int i = 0; i<x; i++)
+   {
+     for(int j = 0; j<y; j++)
+     {
+        c[i][j]  = a[i][j] - b[i][j];
+
+     }
+     printf("\n");
+   }
+   printf("SUBSTRACTION IS DONE\n");
+       for(int i = 0; i<x; i++)
+   {
+     for(int j = 0; j<y; j++)
+     {
+       printf("%d\t",c[i][j]);
+
+     }
+     printf("\n");
+   }
+   break;
+} 
+  case 3:
+  {
+       for(int i = 0; i<x; i++)
+    {
+        for(int j = 0; j<z; j++)
+        {
+            c[i][j] = 0;
+
+            for(int k = 0; k<y; k++)
+            {
+                c[i][j] += a[i][k] * b[k][j];
+            }
+        }
+
+  }
+   printf("MULTIPLICATION IS DONE\n");
+       for(int i = 0; i<x; i++)
+   {
+     for(int j = 0; j<y; j++)
+     {
+       printf("%d\t",c[i][j]);
+
+     }
+     printf("\n");
+   }
+break;
+   }
+   default:
+   {
+   printf("INVIALAD CHOICE");
+   }
+}
+}
+
